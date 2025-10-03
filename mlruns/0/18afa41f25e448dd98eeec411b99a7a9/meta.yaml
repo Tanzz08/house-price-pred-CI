@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/18afa41f25e448dd98eeec411b99a7a9/artifacts
+end_time: 1759501546839
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 18afa41f25e448dd98eeec411b99a7a9
+run_name: nebulous-pig-533
+run_uuid: 18afa41f25e448dd98eeec411b99a7a9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759501537628
+status: 3
+tags: []
+user_id: runner
