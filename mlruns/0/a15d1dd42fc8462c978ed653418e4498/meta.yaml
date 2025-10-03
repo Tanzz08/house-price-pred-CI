@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/a15d1dd42fc8462c978ed653418e4498/artifacts
+end_time: 1759494484545
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a15d1dd42fc8462c978ed653418e4498
+run_name: bold-snipe-698
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759494477290
+status: 3
+tags: []
+user_id: runner
