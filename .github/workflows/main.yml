@@ -58,16 +58,13 @@ jobs:
         git commit -m "Save mlruns from CI run"
         git push -u origin main
 
-  # Get latest run_id
-    - name: Install jq (for parsing JSON)
-      run: sudo apt-get install jq -y
-
+    # Get latest run_id
     - name: Get latest MLflow run_id
       run: |
-        RUN_ID=$(mlflow runs list --experiment-id 0 --output json | jq -r '.[0].run_id')
+        RUN_ID=$(ls -td mlruns/0/*/ | head -n 1 | cut -d'/' -f3)
         echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
         echo "Latest run_id: $RUN_ID"
-          
+        
     # Build Docker Model
     - name: Build Docker Model
       run: |
