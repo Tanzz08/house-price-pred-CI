@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/09c0c5b1145c47e093378a402bd73a74/artifacts
+end_time: 1759496185797
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 09c0c5b1145c47e093378a402bd73a74
+run_name: gaudy-goat-887
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759496178704
+status: 3
+tags: []
+user_id: runner

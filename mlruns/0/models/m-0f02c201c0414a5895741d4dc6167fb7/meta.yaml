@@ -1,0 +1,10 @@
+artifact_location: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/models/m-0f02c201c0414a5895741d4dc6167fb7/artifacts
+creation_timestamp: 1759496180653
+experiment_id: '0'
+last_updated_timestamp: 1759496183122
+model_id: m-0f02c201c0414a5895741d4dc6167fb7
+model_type: null
+name: model
+source_run_id: 09c0c5b1145c47e093378a402bd73a74
+status: 2
+status_message: null
