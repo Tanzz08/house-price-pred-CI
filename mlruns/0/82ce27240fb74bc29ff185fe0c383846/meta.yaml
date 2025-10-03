@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/82ce27240fb74bc29ff185fe0c383846/artifacts
+end_time: 1759503984275
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 82ce27240fb74bc29ff185fe0c383846
+run_name: abrasive-fox-910
+run_uuid: 82ce27240fb74bc29ff185fe0c383846
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759503975099
+status: 3
+tags: []
+user_id: runner
