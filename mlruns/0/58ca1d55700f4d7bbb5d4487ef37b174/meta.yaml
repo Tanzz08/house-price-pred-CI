@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/58ca1d55700f4d7bbb5d4487ef37b174/artifacts
+end_time: 1759496941197
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 58ca1d55700f4d7bbb5d4487ef37b174
+run_name: luminous-wasp-820
+run_uuid: 58ca1d55700f4d7bbb5d4487ef37b174
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759496931815
+status: 3
+tags: []
+user_id: runner
