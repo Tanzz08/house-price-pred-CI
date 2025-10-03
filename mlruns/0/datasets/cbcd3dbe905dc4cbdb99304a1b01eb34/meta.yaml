@@ -1,0 +1,11 @@
+digest: 8b3e672c
+name: dataset
+profile: '{"num_rows": 458, "num_elements": 2290}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "Jumlah Kamar Tidur", "required":
+  true}, {"type": "double", "name": "Jumlah Kamar Mandi", "required": true}, {"type":
+  "double", "name": "Luas Tanah", "required": true}, {"type": "double", "name": "Luas
+  Bangunan", "required": true}, {"type": "double", "name": "Car Port", "required":
+  true}]}'
+source: '{"tags": {"mlflow.user": "runner", "mlflow.source.name": "modelling.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "c76fcb4fdff87c4fa6a5820a10a237255f7ce9a2"}}'
+source_type: code

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/6fe45d7bf1b043bb992c8bee8bc822a6/artifacts
+end_time: 1759493780914
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6fe45d7bf1b043bb992c8bee8bc822a6
+run_name: honorable-goose-960
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759493773425
+status: 3
+tags: []
+user_id: runner
