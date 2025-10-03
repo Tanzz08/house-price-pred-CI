@@ -1,0 +1,36 @@
+artifact_path: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/models/m-5fa136b164e64c7c9adb30809500a202/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+is_signature_from_type_hint: false
+mlflow_version: 3.4.0
+model_id: m-5fa136b164e64c7c9adb30809500a202
+model_size_bytes: 2695506
+model_uuid: m-5fa136b164e64c7c9adb30809500a202
+prompts: null
+run_id: b91563c9d24f4f11997d10dad8f41fe2
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "Jumlah Kamar Tidur", "required": true}, {"type":
+    "double", "name": "Jumlah Kamar Mandi", "required": true}, {"type": "double",
+    "name": "Luas Tanah", "required": true}, {"type": "double", "name": "Luas Bangunan",
+    "required": true}, {"type": "double", "name": "Car Port", "required": true}]'
+  outputs: '[{"type": "double", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-10-03 13:03:16.464428'

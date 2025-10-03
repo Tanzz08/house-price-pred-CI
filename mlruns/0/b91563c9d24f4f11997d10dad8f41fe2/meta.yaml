@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/b91563c9d24f4f11997d10dad8f41fe2/artifacts
+end_time: 1759496598865
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b91563c9d24f4f11997d10dad8f41fe2
+run_name: luxuriant-moth-94
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759496591792
+status: 3
+tags: []
+user_id: runner
