@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/57b514ad5ba749fb8428a9128571e7c0/artifacts
+end_time: 1759495614105
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 57b514ad5ba749fb8428a9128571e7c0
+run_name: likeable-colt-944
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759495607030
+status: 3
+tags: []
+user_id: runner
