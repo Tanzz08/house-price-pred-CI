@@ -71,7 +71,6 @@ jobs:
         mlflow models build-docker \
         --model-uri "runs:/$RUN_ID/model" \
         --name "house_price_prediction" \
-        --build-base-image python:3.12.0-slim
 
     # Login to Docker Hub
     - name: Log in to Docker Hub
