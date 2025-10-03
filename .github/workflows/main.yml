@@ -1,4 +1,4 @@
-name: CI-House-Price-Pred
+name: CI-House-Price-Prediciton
 
 on: 
   push: 
