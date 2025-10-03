@@ -82,11 +82,11 @@ jobs:
     # Tag the Docker image
     - name: Tag Docker Image
       run: |
-        docker tag house_price_prediction ${{ secrets.GIT_USERNAME }}/house_price_prediction:latest
+        docker tag house_price_prediction ${{ secrets.DOCKER_HUB_USERNAME }}/house_price_prediction:latest
 
     # Push Docker image to Docker Hub
     - name: Push Docker Image
       run: |
-        docker push ${{ secrets.GIT_USERNAME }}/house_price_prediction:latest
+        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/house_price_prediction:latest
 
     
