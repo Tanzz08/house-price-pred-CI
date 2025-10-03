@@ -1,0 +1,32 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 2.19.0
+model_size_bytes: 2695506
+model_uuid: 0c7532aa92b74cfcb5a7a952971e3615
+run_id: b464206c199346eca4871533c569ae89
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "Jumlah Kamar Tidur", "required": true}, {"type":
+    "double", "name": "Jumlah Kamar Mandi", "required": true}, {"type": "double",
+    "name": "Luas Tanah", "required": true}, {"type": "double", "name": "Luas Bangunan",
+    "required": true}, {"type": "double", "name": "Car Port", "required": true}]'
+  outputs: '[{"type": "double", "required": true}]'
+  params: null
+utc_time_created: '2025-10-03 13:30:50.839024'
