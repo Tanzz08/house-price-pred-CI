@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/e8ffe72480774138a5f6833bad47c382/artifacts
+end_time: 1759510740269
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e8ffe72480774138a5f6833bad47c382
+run_name: clumsy-bass-838
+run_uuid: e8ffe72480774138a5f6833bad47c382
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759510730888
+status: 3
+tags: []
+user_id: runner
