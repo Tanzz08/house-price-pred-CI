@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/d131b7d693084bc28209bc9946172e45/artifacts
+end_time: 1759766626887
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d131b7d693084bc28209bc9946172e45
+run_name: thoughtful-bear-848
+run_uuid: d131b7d693084bc28209bc9946172e45
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759766617512
+status: 3
+tags: []
+user_id: runner
