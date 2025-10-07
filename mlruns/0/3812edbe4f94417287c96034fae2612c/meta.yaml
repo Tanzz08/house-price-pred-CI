@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/house-price-pred-CI/house-price-pred-CI/mlruns/0/3812edbe4f94417287c96034fae2612c/artifacts
+end_time: 1759805470831
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3812edbe4f94417287c96034fae2612c
+run_name: monumental-owl-10
+run_uuid: 3812edbe4f94417287c96034fae2612c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759805461185
+status: 3
+tags: []
+user_id: runner
