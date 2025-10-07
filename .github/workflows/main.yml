@@ -1,52 +1,92 @@
-name: Preprocessing Workflow
+name: CI-House-Price-Prediciton
 
-on:
-  push:
-    branches:
+on: 
+  push: 
+    branches: 
+      - main
+  pull_request: 
+    branches: 
       - main
 
-jobs:
-  preprocessing:
+env:
+  TRAIN_FILE: "MLproject/X_train.csv"
+  TEST_FILE: "MLproject/X_test.csv"
+  YTRAIN_FILE: "MLproject/y_train.csv"
+  YTEST_FILE: "MLproject/y_test.csv"
+
+jobs: 
+  build: 
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
-    steps:
-      # Checkout repo agar bisa push balik
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-          fetch-depth: 0  # penting untuk push balik
+    steps: 
+    - uses: actions/checkout@v3
 
-      # Setup Python
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
+    # setup python 3.12.7
+    - name: Set up python 3.12.7
+      uses: actions/setup-python@v4
+      with: 
+        python-version: "3.12.7"
 
-      # Install dependencies
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+    # Check env variables
+    - name: Check Env
+      run: |
+        echo "TRAIN_FILE=$TRAIN_FILE"
+        echo "TEST_FILE=$TEST_FILE"
+        echo "YTRAIN_FILE=$YTRAIN_FILE"
+        echo "YTEST_FILE=$YTEST_FILE"
 
-      # Jalankan script preprocessing
-      - name: Run preprocessing
-        run: |
-          python preprocessing/automate_Bustanul-Khair.py
+    # Install mlflow
+    - name: install dependencies
+      run: | 
+        python -m pip install --upgrade pip
+        pip install mlflow==2.19.0
 
-      # Commit dan push hasil preprocessing
-      - name: Commit and push processed data
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+    # run as a mlflow project
+    - name: Run mlflow project
+      run: |
+        mlflow run MLproject --env-manager=local
 
-          # Tambahkan semua file hasil preprocessing
-          git add preprocessing/X_train.csv preprocessing/X_test.csv preprocessing/y_train.csv preprocessing/y_test.csv preprocessing/preprocessor_pipeline.joblib
+    # Save model to Github Repository
+    # Save models to GitHub Repository
+    - name: Save mlruns to repo
+      run: |
+        git config --global user.name ${{ secrets.GIT_USERNAME }}
+        git config --global user.email ${{ secrets.GIT_EMAIL }}
+        git add mlruns/
+        git commit -m "Save mlruns from CI run"
+        git push -u origin main
 
-          # Cek apakah ada perubahan sebelum commit
-          if git diff --cached --quiet; then
-            echo "✅ Tidak ada perubahan untuk di-commit."
-          else
-            git commit -m "Auto-update: hasil preprocessing terbaru 🚀"
-            git push origin main
-          fi
+    # Get latest run_id
+    - name: Get latest MLflow run_id
+      run: |
+        RUN_ID=$(ls -td mlruns/0/*/ | grep -Eo '[0-9a-f]{32}' | head -n 1)
+        echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
+        echo "Latest run_id: $RUN_ID"
+        
+    # Build Docker Model
+    - name: Build Docker Model
+      run: |
+        mlflow models build-docker \
+        --model-uri "runs:/$RUN_ID/model" \
+        --name "house_price_prediction" \
+
+    # Login to Docker Hub
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+    # Tag the Docker image
+    - name: Tag Docker Image
+      run: |
+        docker tag house_price_prediction ${{ secrets.DOCKER_HUB_USERNAME }}/house_price_prediction:latest
+
+    # Push Docker image to Docker Hub
+    - name: Push Docker Image
+      run: |
+        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/house_price_prediction:latest
+
+    
